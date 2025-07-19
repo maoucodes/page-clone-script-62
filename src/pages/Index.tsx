@@ -8,7 +8,7 @@ const Index = () => {
     <div className="min-h-screen bg-background glass-texture">
       <Header />
       
-      <main className="flex-1 flex flex-col items-center justify-center px-8 py-16">
+      <main className="flex-1 flex flex-col items-center justify-center px-8 py-24 pt-32">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-8xl font-light text-schemely-text mb-8 tracking-wide">
             Schemely
@@ -214,7 +214,7 @@ const Index = () => {
                     Email support
                   </li>
                 </ul>
-                <button className="w-full py-3 px-6 rounded-full border border-schemely-accent text-schemely-accent hover:bg-schemely-accent hover:text-white transition-all duration-300">
+                <button className="w-full py-3 px-6 rounded-full border border-schemely-accent text-schemely-accent hover:bg-schemely-accent hover:text-white hover:shadow-lg hover:shadow-schemely-accent/30 hover:scale-105 transition-all duration-300 font-medium">
                   Get Started
                 </button>
               </div>
@@ -256,7 +256,7 @@ const Index = () => {
                     API access
                   </li>
                 </ul>
-                <button className="w-full py-3 px-6 rounded-full bg-schemely-accent text-white hover:bg-schemely-accent-light transition-all duration-300">
+                <button className="w-full py-3 px-6 rounded-full bg-schemely-accent text-white hover:bg-schemely-accent-light hover:shadow-lg hover:shadow-schemely-accent/30 hover:scale-105 transition-all duration-300 font-semibold">
                   Get Started
                 </button>
               </div>
@@ -295,7 +295,7 @@ const Index = () => {
                     Custom integrations
                   </li>
                 </ul>
-                <button className="w-full py-3 px-6 rounded-full border border-schemely-accent text-schemely-accent hover:bg-schemely-accent hover:text-white transition-all duration-300">
+                <button className="w-full py-3 px-6 rounded-full border border-schemely-accent text-schemely-accent hover:bg-schemely-accent hover:text-white hover:shadow-lg hover:shadow-schemely-accent/30 hover:scale-105 transition-all duration-300 font-medium">
                   Contact Sales
                 </button>
               </div>

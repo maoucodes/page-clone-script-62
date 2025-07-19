@@ -37,8 +37,8 @@ All colors MUST be HSL.
     --ring: 0 0% 45%;
 
     /* Custom colors for Schemely design */
-    --schemely-text: 0 0% 60%;
-    --schemely-light: 0 0% 70%;
+    --schemely-text: 0 0% 40%;
+    --schemely-light: 0 0% 55%;
     --schemely-button: 220 14% 96%;
     --schemely-button-text: 220 39% 11%;
     --schemely-accent: 220 70% 50%;
