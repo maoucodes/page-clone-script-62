@@ -146,6 +146,122 @@ data: DONE`}</pre>
             </div>
           </section>
 
+          {/* Code Examples */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-light text-schemely-text mb-6">Code Examples</h2>
+            
+            <div className="space-y-8">
+              {/* JavaScript Example */}
+              <div className="p-6 rounded-lg backdrop-blur-sm bg-white/10 border border-schemely-accent/20">
+                <h4 className="text-lg font-medium text-schemely-text mb-3">JavaScript/Node.js</h4>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-sm text-schemely-light overflow-x-auto">
+                  <pre>{`// Install fetch for Node.js: npm install node-fetch
+const fetch = require('node-fetch'); // For Node.js
+
+const response = await fetch('https://schemely.onrender.com/api/generate', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-API-Key': 'your-api-key-here',
+  },
+  body: JSON.stringify({
+    query: "Latest tech gadgets 2024",
+    schema: {
+      name: "product name",
+      price: "product price", 
+      description: "product description"
+    },
+    stream: false
+  }),
+});
+
+const data = await response.json();
+console.log(data);`}</pre>
+                </div>
+              </div>
+
+              {/* Python Example */}
+              <div className="p-6 rounded-lg backdrop-blur-sm bg-white/10 border border-schemely-accent/20">
+                <h4 className="text-lg font-medium text-schemely-text mb-3">Python</h4>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-sm text-schemely-light overflow-x-auto">
+                  <pre>{`import requests
+import json
+
+url = "https://schemely.onrender.com/api/generate"
+headers = {
+    "Content-Type": "application/json",
+    "X-API-Key": "your-api-key-here"
+}
+
+payload = {
+    "query": "Best restaurants in Tokyo",
+    "schema": {
+        "name": "restaurant name",
+        "cuisine": "type of cuisine",
+        "rating": "customer rating"
+    },
+    "stream": False
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(payload))
+data = response.json()
+print(data)`}</pre>
+                </div>
+              </div>
+
+              {/* Streaming Example */}
+              <div className="p-6 rounded-lg backdrop-blur-sm bg-white/10 border border-schemely-accent/20">
+                <h4 className="text-lg font-medium text-schemely-text mb-3">JavaScript (Streaming)</h4>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-sm text-schemely-light overflow-x-auto">
+                  <pre>{`const response = await fetch('https://schemely.onrender.com/api/generate', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-API-Key': 'your-api-key-here',
+  },
+  body: JSON.stringify({
+    query: "Top AI tools for developers",
+    schema: {
+      name: "tool name",
+      description: "tool description",
+      pricing: "pricing model"
+    },
+    stream: true
+  }),
+});
+
+const reader = response.body.getReader();
+const decoder = new TextDecoder();
+
+while (true) {
+  const { done, value } = await reader.read();
+  if (done) break;
+  
+  const chunk = decoder.decode(value);
+  const lines = chunk.split('\\n');
+  
+  for (const line of lines) {
+    if (line.startsWith('data: ')) {
+      const data = line.substring(6);
+      if (data === 'DONE') {
+        console.log('Stream completed');
+        break;
+      }
+      
+      try {
+        const parsed = JSON.parse(data);
+        console.log('New result:', parsed);
+      } catch (e) {
+        console.error('Parse error:', e);
+      }
+    }
+  }
+}`}</pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Base URL */}
           <section className="mb-16">
             <h2 className="text-3xl font-light text-schemely-text mb-6">Base URL</h2>

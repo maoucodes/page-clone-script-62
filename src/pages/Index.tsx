@@ -11,17 +11,36 @@ const Index = () => {
       
       <main className="flex-1 flex flex-col items-center justify-center px-8 py-24 pt-32">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-8xl font-light text-schemely-text mb-8 tracking-wide">
-            Schemely
-          </h1>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-schemely-accent/20 via-transparent to-schemely-accent/20 blur-xl opacity-60 animate-pulse"></div>
+            <h1 className="relative text-8xl font-light text-schemely-text mb-8 tracking-wide">
+              Schemely
+            </h1>
+          </div>
           
-          <p className="text-xl text-schemely-text mb-6 max-w-2xl mx-auto">
+          <p className="text-xl text-schemely-text mb-6 max-w-2xl mx-auto font-medium">
             Turn any natural language query or URL into structured JSON data using AI-powered schema extraction.
           </p>
           
           <p className="text-lg text-schemely-light mb-12 max-w-3xl mx-auto">
             Just define what data you want — Schemely handles search, scraping, and structuring for you.
           </p>
+          
+          {/* Stats */}
+          <div className="flex gap-8 justify-center mb-12 text-center">
+            <div className="p-4 rounded-lg backdrop-blur-sm bg-white/5">
+              <div className="text-2xl font-bold text-schemely-accent">99.9%</div>
+              <div className="text-sm text-schemely-light">Accuracy</div>
+            </div>
+            <div className="p-4 rounded-lg backdrop-blur-sm bg-white/5">
+              <div className="text-2xl font-bold text-schemely-accent">&lt;200ms</div>
+              <div className="text-sm text-schemely-light">Response Time</div>
+            </div>
+            <div className="p-4 rounded-lg backdrop-blur-sm bg-white/5">
+              <div className="text-2xl font-bold text-schemely-accent">10M+</div>
+              <div className="text-sm text-schemely-light">Extractions</div>
+            </div>
+          </div>
           
           <div className="flex gap-4 justify-center">
             <Enhanced3DButton className="mb-6">

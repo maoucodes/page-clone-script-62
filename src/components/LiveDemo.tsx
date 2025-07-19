@@ -12,7 +12,7 @@ const LiveDemo = () => {
   "description": "description of the product", 
   "release_date": "release date"
 }`);
-  const [apiKey, setApiKey] = useState('');
+  const [apiKey, setApiKey] = useState('test');
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<any[]>([]);
   const [streamOutput, setStreamOutput] = useState('');
@@ -125,8 +125,8 @@ const LiveDemo = () => {
                     API Key
                   </label>
                   <Input
-                    type="password"
-                    placeholder="Enter your API key"
+                    type="text"
+                    placeholder="test"
                     value={apiKey}
                     onChange={(e) => setApiKey(e.target.value)}
                     className="bg-black/20 border-schemely-accent/30 text-schemely-text placeholder:text-schemely-light/50"
