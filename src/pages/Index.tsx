@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import DataFlowFigures from '@/components/DataFlowFigures';
 import Enhanced3DButton from '@/components/Enhanced3DButton';
+import LiveDemo from '@/components/LiveDemo';
 
 const Index = () => {
   return (
@@ -22,9 +23,16 @@ const Index = () => {
             Just define what data you want — Schemely handles search, scraping, and structuring for you.
           </p>
           
-          <Enhanced3DButton className="mb-6">
-            Start Extracting Data
-          </Enhanced3DButton>
+          <div className="flex gap-4 justify-center">
+            <Enhanced3DButton className="mb-6">
+              Start Extracting Data
+            </Enhanced3DButton>
+            <Enhanced3DButton variant="outline" className="mb-6">
+              <a href="/docs" className="text-inherit no-underline">
+                View Documentation
+              </a>
+            </Enhanced3DButton>
+          </div>
           
           <p className="text-sm text-schemely-light">
             Real-time streaming • AI-powered • JSON output
@@ -33,6 +41,9 @@ const Index = () => {
         
         <DataFlowFigures />
       </main>
+
+      {/* Live Demo Section */}
+      <LiveDemo />
 
       {/* Features Section */}
       <section className="px-8 py-20 bg-white/5 backdrop-blur-sm">
@@ -175,7 +186,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="px-8 py-20 bg-white/5 backdrop-blur-sm">
+      <section id="pricing" className="px-8 py-20 bg-white/5 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-schemely-text mb-4">

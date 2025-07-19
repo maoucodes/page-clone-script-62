@@ -15,12 +15,9 @@ const Header = () => {
           </div>
           
           <nav className="flex items-center space-x-8">
-            <a href="#" className="text-schemely-text hover:text-schemely-accent transition-all duration-300 hover:scale-105">
-              Documentation
-            </a>
-            <a href="#" className="text-schemely-text hover:text-schemely-accent transition-all duration-300 hover:scale-105">
-              API
-            </a>
+            <a href="/" className="text-schemely-light hover:text-schemely-accent transition-colors">Home</a>
+            <a href="/docs" className="text-schemely-light hover:text-schemely-accent transition-colors">Documentation</a>
+            <a href="#pricing" className="text-schemely-light hover:text-schemely-accent transition-colors">Pricing</a>
           </nav>
         </div>
       </div>

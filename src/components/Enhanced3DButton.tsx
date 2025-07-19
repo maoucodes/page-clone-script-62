@@ -6,15 +6,21 @@ interface Enhanced3DButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  variant?: 'default' | 'outline';
 }
 
-const Enhanced3DButton: React.FC<Enhanced3DButtonProps> = ({ children, className, onClick }) => {
+const Enhanced3DButton: React.FC<Enhanced3DButtonProps> = ({ children, className, onClick, variant = 'default' }) => {
+  const isOutline = variant === 'outline';
   return (
     <div className="relative inline-block group">
       <Button 
         variant="schemely" 
         size="lg" 
-        className={`relative overflow-hidden backdrop-blur-sm bg-schemely-button/80 border border-schemely-accent/20 shadow-lg hover:shadow-2xl hover:shadow-schemely-accent/20 hover:scale-105 transition-all duration-300 font-semibold ${className}`}
+        className={`relative overflow-hidden backdrop-blur-sm ${
+          isOutline 
+            ? 'bg-transparent border-2 border-schemely-accent text-schemely-accent hover:bg-schemely-accent hover:text-white' 
+            : 'bg-schemely-button/80 border border-schemely-accent/20'
+        } shadow-lg hover:shadow-2xl hover:shadow-schemely-accent/20 hover:scale-105 transition-all duration-300 font-semibold ${className}`}
         onClick={onClick}
       >
         <div className="relative z-10 group-hover:text-schemely-accent transition-colors duration-300">
